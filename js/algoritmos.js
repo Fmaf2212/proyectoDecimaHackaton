@@ -85,9 +85,9 @@
 //     b: 2
 // };
 
-// const fromObjectToArray = () => console.log(Object.values(objeto), Object.keys(objeto));
+// let claveValor = Object.entries(objeto);
 
-// fromObjectToArray();
+// console.log(claveValor);
 
 // /* 11. Cree la función que toma una matriz con objetos y devuelve la suma de los presupuestos de las personas. 
  
@@ -103,9 +103,74 @@
 
 // /* 12. Cree una función que tome una matriz de estudiantes y devuelva una matriz de nombres de estudiantes. getStudentNames([   { name: "Steve" },   { name: "Mike" },   { name: "John" } ]) ➞ ["Becky", "John", "Steve"]  */
 
-const estudiantes =[{ name: "Steve"},{name: "Mike"},{name:"Jhon"}]
-for(let estudiante of estudiantes){
-    console.log(Object.values(estudiante));
+// const estudiantes =[{ name: "Steve"},{name: "Mike"},{name:"Jhon"}]
+// for(let estudiante of estudiantes){
+//     console.log(Object.values(estudiante));
 
+// }
+
+/* 13. Escriba una función que convierta un objeto en una matriz de claves y valores. objectToArray({   likes: 2,   dislikes: 3,   followers: 10 }) ➞ [["likes", 2], ["dislikes", 3], ["followers", 10]]  */
+// const valores ={
+//     likes: 2,
+//     dislikes: 3,
+//     followers: 10
+// }
+// let arregloDeClavesYValores = Object.entries(valores);
+// console.log("Claves y valores: ", arregloDeClavesYValores);
+
+/* 14. Cree una función donde, dado el número n, devuelva la suma de todos los números cuadrados  incluyendo n.  */
+// function sumaCuadrados(...n){
+//     let suma= 0;
+//     for (i = 0; i < n.length; i++) {
+//         suma=suma + Math.pow(n[i],2)
+//     }
+//     console.log(suma);
+// }
+// sumaCuadrados(1,2,3);
+
+/* 15. Cree una función para multiplicar todos los valores en una matriz por la cantidad de valores en la matriz dada multiplyByLength([2, 3, 1, 0]) ➞ [8, 12, 4, 0]  */
+// const valoresAMultiplicar = [2,3,1,0];
+
+// function productoPorCantValores(){
+//     valoresAMultiplicar.forEach(element => {
+//             console.log(element*valoresAMultiplicar.length);
+//     });
+// }
+
+// productoPorCantValores();
+
+/* 16.  Cree una función que tome un número como argumento y devuelva una matriz de números contando desde este número a cero. countdown(5) ➞ [5, 4, 3, 2, 1, 0]  */
+// function ordSelDesc(numero) {
+//     for (i = numero ; i >=0 ; i--) {
+//         let newMatriz =[];
+//         newMatriz.push(i);
+//         console.log(newMatriz);
+//     }
+// }
+
+// ordSelDesc(5)
+
+/* 17. Cree una función que tome una matriz y devuelva la diferencia entre los números más grandes y más pequeños.  */
+// const valores = [10, 4, 1, 4, -10, -50, 32, 21];
+
+// const differenceMinMax = () => {
+
+//     let valorMayor;
+//     let valorMenor;
+//     let diferencia;
+//     valorMayor=Math.max.apply(null, valores);
+//     valorMenor=Math.min.apply(null, valores);
+//     diferencia=valorMayor-valorMenor;
+//     console.log(`La diferencian entre el numero mayor ${valorMayor} y el numero menor ${valorMenor} es ${diferencia}`)
+// }
+
+// differenceMinMax();
+
+/* 22. Cree una función que capitalice la última letra de cada palabra.   */
+
+const capitalize = (s) => {
+    if (typeof s !== 'string') return ''
+    return console.log(s.slice(0,s.length-1)+ s.charAt(s.length-1).toUpperCase());  
 }
 
+capitalize("hello");

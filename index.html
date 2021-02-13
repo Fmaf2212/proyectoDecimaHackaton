@@ -72,6 +72,8 @@
                 <button class="algorithms__btn" onclick="filterSelection('ejercicio13')"> Ejercicio 13</button>
                 <button class="algorithms__btn" onclick="filterSelection('ejercicio14')"> Ejercicio 14</button>
                 <button class="algorithms__btn" onclick="filterSelection('ejercicio15')"> Ejercicio 15</button>
+                <button class="algorithms__btn" onclick="filterSelection('ejercicio16')"> Ejercicio 16</button>
+                <button class="algorithms__btn" onclick="filterSelection('ejercicio22')"> Ejercicio 22</button>
             </div>
 
             <div class="algorithms__block">
@@ -174,194 +176,50 @@
                 </article>
                 <article class="algorithms__block__article ejercicio13">
                     <div class="algorithms__block__info">
-                        <h2>Realice un algoritmo para leer las calificaciones de N alumnos y determine el número de aprobados y reprobados </h2>
+                        <h2>Escriba una función que convierta un objeto en una matriz de claves y valores. objectToArray({   likes: 2,   dislikes: 3,   followers: 10 }) ➞ [["likes", 2], ["dislikes", 3], ["followers", 10]]</h2>
                         <div>
-                            <br>
-                            function calcularAprobYReprob(cantAlumnos){
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;let aprobados = 0;
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;let reprobados = 0;
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;let calificacion;
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;let mostrarCali=[];
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;while(cantAlumnos>0){
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;calificacion=Number(prompt('Ingresa la calificación'));
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;if(calificacion>=10.5){
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aprobados = aprobados+1;
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;}
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;else{
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reprobados = reprobados+1;
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;}
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;cantAlumnos=cantAlumnos-1;
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;mostrarCali[cantAlumnos] = calificacion;
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;}
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;console.log(`Las calificaciones son ${mostrarCali}`);
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;console.log(`El total de alumnos aprobados es ${aprobados}`);
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;console.log(`El total de alumnos reprobados es ${reprobados}`);
-                                <br>
-                                <br>
-                                }
-                                <br>
-                                <br>
-                            calcularAprobYReprob(5);
+                            <img src="img/ejercicio13.png" alt="">
                         </div>
-                        <p>CONSOLA: Las calificaciones son 15,20,10,10,20 <br>
-                            El total de alumnos aprobados es 3 <br>
-                            El total de alumnos reprobados es 2</p>
                     </div>
                 </article>
                 <article class="algorithms__block__article ejercicio14">
                     <div class="algorithms__block__info">
-                        <h2> Una compañía, fabrica focos de colores (verdes, blancos y rojos). Se desea contabilizar, de un lote de N focos, el número de focos de cada color que hay en existencia </h2>
+                        <h2> Cree una función donde, dado el número n, devuelva la suma de todos los números cuadrados  incluyendo n. </h2>
                         <div>
-                            <br>
-                            function calcularFocos(n) {
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;let color;
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;let verde = 0;
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;let blanco = 0;
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;let rojo = 0;
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;while (n > 0) {
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;color = document.querySelector('input[name=color]:checked').value;
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;if (color >= 1 && color <= 3) {
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (color == 1) {
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;verde = verde + 1;
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if (color == 2) {
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;blanco = blanco + 1;
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else {
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rojo = rojo + 1;
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = n - 1;
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;}
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;else {
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Ingresa un color correcto");
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;}
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;}
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;console.log(`El total de focos verdes es ${verde}`);
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;console.log(`El total de focos blancos es ${blanco}`);
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;console.log(`El total de focos rojos es ${rojo}`);
-                                <br>
-                                <br>
-                                }
-                                <br>
-                                <br>
-                                calcularFocos(3);
+                            <img src="img/ejercicio14.png" alt="">
                         </div>
-                        <p>CONSOLA: El total de focos verdes es 3 <br>
-                            El total de focos blancos es 0<br>
-                            El total de focos rojos es 0</p>
                     </div>
                 </article>
                 <article class="algorithms__block__article ejercicio15">
                     <div class="algorithms__block__info">
-                        <h2>Realice un algoritmo para determinar si una persona puede votar con base en su edad en las
-                            próximas elecciones </h2>
+                        <h2>Cree una función para multiplicar todos los valores en una matriz por la cantidad de valores en la matriz dada multiplyByLength([2, 3, 1, 0]) ➞ [8, 12, 4, 0] </h2>
                         <div>
-                            <br>
-                            function conocerSiVota(edad) {
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;const edadApta = 18;
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;if (edad >= edadApta) {
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;console.log(`La persona tiene ${edad} años y puede votar.`);
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;}
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;else {
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;console.log(`La persona tiene ${edad} años y aún no puede votar.`);
-                                <br>
-                                <br>
-                                &nbsp;&nbsp;}
-                                <br>
-                                <br>
-                                }
-                                <br>
-                                <br>
-                                conocerSiVota(15);
+                            <img src="img/ejercicio15.png" alt="">
                         </div>
-                        <p>CONSOLA: La persona tiene 15 años y aún no puede votar.</p>
+                    </div>
+                </article>
+                <article class="algorithms__block__article ejercicio16">
+                    <div class="algorithms__block__info">
+                        <h2> Cree una función que tome un número como argumento y devuelva una matriz de números contando desde este número a cero. countdown(5) ➞ [5, 4, 3, 2, 1, 0] </h2>
+                        <div>
+                            <img src="img/ejercicio16.png" alt="">
+                        </div>
+                    </div>
+                </article>
+                <article class="algorithms__block__article ejercicio17">
+                    <div class="algorithms__block__info">
+                        <h2>  Cree una función que tome una matriz y devuelva la diferencia entre los números más grandes y más pequeños. diffMaxMin([10, 4, 1, 4, -10, -50, 32, 21]) ➞ 82 // Smallest number is -50, biggest is 32.  </h2>
+                        <div>
+                            <img src="img/ejercicio17.png" alt="">
+                        </div>
+                    </div>
+                </article>
+                <article class="algorithms__block__article ejercicio22">
+                    <div class="algorithms__block__info">
+                        <h2>  Cree una función que capitalice la última letra de cada palabra.  </h2>
+                        <div>
+                            <img src="img/ejercicio22.png" alt="">
+                        </div>
                     </div>
                 </article>
             </div>
